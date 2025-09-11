@@ -19,3 +19,16 @@ body{
   margin: 0;
   
 }
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* adjust height */
+  }
+}
+
+.float-animation {
+  animation: floatUpDown 2s ease-in-out infinite;
+}

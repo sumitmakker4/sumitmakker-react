@@ -8,8 +8,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<DefaultLayout />}/>
+        <Route path="/" element={<DefaultLayout />}>
           <Route key={'home'} path="" element={<Home />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )

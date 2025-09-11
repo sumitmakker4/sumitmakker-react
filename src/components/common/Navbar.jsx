@@ -21,11 +21,11 @@ export default function Navbar() {
     }
 
     const SocialMediaLink = ({item}) => {
-        return <a href={item.link} target='_blank' className={`!font-normal !text-[#F8F7F9] text-[18px] ${item.icon}`}></a>
+        return <a href={item.link} target='_blank' className={`!font-normal !text-[#F8F7F9] hover:!no-underline text-[18px] ${item.icon}`}></a>
     }
 
     return (
-        <div className='flex justify-between p-5'>
+        <div className='flex justify-between mb-5 max-w-[75%] mx-auto'>
             <img />
 
             <div className='flex items-center gap-14'>
