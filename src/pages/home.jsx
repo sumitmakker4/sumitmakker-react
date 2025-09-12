@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import homeWhiteBg from '../assets/home-white-bg.svg'
-import boxlLogo from '../assets/boxl-logo.webp'
+import boxlLogo from '../assets/logo/boxl-logo.webp'
+import landfLogo from '../assets/logo/l&f-logo.svg'
+import taHome from '../assets/projects/ta-home.png'
+import bmtHome from '../assets/projects/bmt-home.png'
 
 export default function Home() {
 
@@ -46,18 +49,50 @@ export default function Home() {
 
       {/* About Me */}
       <div id='about-me-section' className='flex flex-col items-center gap-4 mb-20'>
-        <span className='font-bold text-2xl border-b-2 uppercase mb-4'>About me</span>
-        <p className='text-[#F8F7F9]/60 text-lg leading-7'>I am a Full Stack Developer who enjoys building complete applications, from user-friendly frontends to robust backends. I love solving problems and creating digital solutions that are clean, responsive, and impactful.</p>
-
-        <div className='flex items-center'>
-          <img src={boxlLogo}/>
+        <span className='font-bold text-3xl border-b-2 uppercase mb-10'>About me</span>
+        <p className='text-[#F8F7F9]/60 text-xl leading-7'>I am a Full Stack Developer who enjoys building complete applications, from user-friendly frontends to robust backends. I love solving problems and creating digital solutions that are clean, responsive, and impactful.</p>
+        <div className='flex items-center mt-2'>
+          <img src={boxlLogo} className='h-16'/>
           <p className='text-[#F8F7F9]/60 text-lg leading-7'>I started my career at Boxl Technologies as a Junior Web Developer, where I gained hands-on experience with real projects, built responsive websites, and worked with APIs. This role gave me a strong foundation in professional development.</p>
         </div>
 
-        <div className='flex'>
+        <div className='flex mt-2'>
           <p className='text-[#F8F7F9]/60 text-lg leading-7'>Currently, I work at Lyxel and Flamingo on advanced full stack projects, focusing on scalable applications and modern frameworks. This experience has helped me grow, take ownership of tasks, and continue evolving as a developer.</p>
+          <img src={landfLogo} className='h-16'/>
         </div>
 
+      </div>
+
+      <div id='about-me-section' className='flex flex-col items-center gap-4 mb-20'>
+        <span className='font-bold text-3xl border-b-2 uppercase mb-10'>Projects</span>
+        
+        <div className='grid grid-cols-3 gap-10'>
+          
+          {/* Body Mind Therapy */}
+          <Link className="relative rounded-lg overflow-hidden group">
+            <img className="w-full h-full object-cover" src={bmtHome} />
+
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <i className='text-xl pi pi-globe me-2' style={{WebkitTextStrokeWidth : '0.7px'}}></i>
+              <span className="text-2xl font-bold uppercase">
+                Body Mind Therapy
+              </span>
+            </div>
+          </Link>
+          
+          {/* Test Academy */}
+          <Link className="relative rounded-lg overflow-hidden group">
+            <img className="w-full h-full object-cover" src={taHome} />
+
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <i className='text-xl pi pi-globe me-2' style={{WebkitTextStrokeWidth : '0.7px'}}></i>
+              <span className="text-2xl font-bold uppercase">
+                Test Academy
+              </span>
+            </div>
+          </Link>
+
+        </div>
       </div>
 
     </div>
