@@ -6,8 +6,8 @@ import Footer from '../common/Footer'
 export default function DefaultLayout() {
   return (
     <>
-      <div className='max-w-[70%] mx-auto py-8'>
-        <Navbar/>
+      <Navbar/>
+      <div className='max-w-[60%] mx-auto pb-8 mt-40'>
         <Outlet />
       </div>
       <Footer />

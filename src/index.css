@@ -9,11 +9,6 @@
   font-synthesis: none;
 }
 
-a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 body{
   font-family: "Poppins", sans-serif;
   margin: 0;

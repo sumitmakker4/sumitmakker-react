@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import homeWhiteBg from '../assets/home-white-bg.svg'
 import boxlLogo from '../assets/logo/boxl-logo.webp'
 import landfLogo from '../assets/logo/l&f-logo.svg'
-import taHome from '../assets/projects/ta-home.png'
-import bmtHome from '../assets/projects/bmt-home.png'
+import Project from '../components/projects/Project'
+import {projects} from '../data/index'
 
 export default function Home() {
 
   function scrollToAboutMe() {
     const target = document.getElementById("about-me-section");
-    const top = target.getBoundingClientRect().top + window.scrollY;
+    const top = target.getBoundingClientRect().top + window.scrollY - 50;
 
     window.scrollTo({
       top,
@@ -22,12 +22,12 @@ export default function Home() {
     <div>
       
       {/* Top Section */}
-      <div className='lg:mt-40'>
+      <div>
 
-        <div className='flex justify-between items-center mt-[-140px]'>
+        <div className='relative flex justify-between'>
 
           {/* Name and basic intro */}
-          <div className='flex flex-col items-start gap-5'>
+          <div className='flex flex-col items-start gap-5 mt-30'>
             <span className='uppercase text-xl font-bold'>Hi, I'm Sumit</span>
             <span className='uppercase font-bold text-[60px] leading-[64px]'>I'm a Full Stack<br></br> Web Developer</span>
 
@@ -36,14 +36,14 @@ export default function Home() {
             <Link to={'/projects'} className='bg-[#F8F7F9] text-[#1F1F1F] hover:!no-underline font-bold rounded-md text-center uppercase px-3 py-2'>View my projects</Link>
           </div>
 
-          <img src={homeWhiteBg} className='w-[600px]'/>
+          <img src={homeWhiteBg} className='absolute right-[-100px] w-[600px] ml-30'/>
 
         </div>
         
       </div>
 
       {/* Scroll Down Button */}
-      <div className='flex items-center justify-center bg-[#1F1F1F] hover:bg-[#F8F7F9] hover:text-[#1F1F1F] w-14 h-14 mx-auto rounded-full shadow-[4px_12px_24px_rgba(248,247,249,0.1),0px_0px_8px_rgba(248,247,249,0.08)] mt-20 mb-20 float-animation cursor-pointer transition-colors duration-500 ease-in-out' onClick={scrollToAboutMe}>
+      <div className='flex items-center justify-center bg-[#1F1F1F] hover:bg-[#F8F7F9] hover:text-[#1F1F1F] w-14 h-14 mx-auto rounded-full shadow-[4px_12px_24px_rgba(248,247,249,0.1),0px_0px_8px_rgba(248,247,249,0.08)] mt-60 mb-20 float-animation cursor-pointer transition-colors duration-500 ease-in-out' onClick={scrollToAboutMe}>
         <i className='pi pi-arrow-down text-lg' style={{WebkitTextStrokeWidth : '1.5px'}}></i>
       </div>
 
@@ -63,34 +63,14 @@ export default function Home() {
 
       </div>
 
-      <div id='about-me-section' className='flex flex-col items-center gap-4 mb-20'>
+      <div className='flex flex-col items-center gap-4 mb-20'>
         <span className='font-bold text-3xl border-b-2 uppercase mb-10'>Projects</span>
         
         <div className='grid grid-cols-3 gap-10'>
           
-          {/* Body Mind Therapy */}
-          <Link className="relative rounded-lg overflow-hidden group">
-            <img className="w-full h-full object-cover" src={bmtHome} />
-
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <i className='text-xl pi pi-globe me-2' style={{WebkitTextStrokeWidth : '0.7px'}}></i>
-              <span className="text-2xl font-bold uppercase">
-                Body Mind Therapy
-              </span>
-            </div>
-          </Link>
-          
-          {/* Test Academy */}
-          <Link className="relative rounded-lg overflow-hidden group">
-            <img className="w-full h-full object-cover" src={taHome} />
-
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <i className='text-xl pi pi-globe me-2' style={{WebkitTextStrokeWidth : '0.7px'}}></i>
-              <span className="text-2xl font-bold uppercase">
-                Test Academy
-              </span>
-            </div>
-          </Link>
+          {
+            projects.map(project => <Project item={project}/>)
+          }
 
         </div>
       </div>
