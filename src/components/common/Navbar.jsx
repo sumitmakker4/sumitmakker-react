@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
     const [hidden, setHidden] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
 
     const pageLinks = [
         { label: "Home", link: "/" },
@@ -39,7 +38,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
+            if (window.scrollY > 90) {
                 setHidden(true);
             } else {
                 setHidden(false);
@@ -49,7 +48,7 @@ export default function Navbar() {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
     return (
         <nav
