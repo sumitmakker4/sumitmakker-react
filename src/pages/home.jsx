@@ -31,7 +31,7 @@ export default function Home() {
             <span className='uppercase text-xl font-bold'>Hi, I'm Sumit</span>
             <span className='uppercase font-bold text-[60px] leading-[64px]'>I'm a Full Stack<br></br> Web Developer</span>
 
-            <span className='text-[#F8F7F9]/60'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br> Nunc vulputate libero et velit interdum, ac aliquet mattis.</span>
+            <span className='text-[#A9A9A9]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></br> Nunc vulputate libero et velit interdum, ac aliquet mattis.</span>
 
             <Link to={'/projects'} className='bg-[#F8F7F9] text-[#1F1F1F] hover:!no-underline font-bold rounded-md text-center uppercase px-3 py-2'>View my projects</Link>
           </div>
@@ -50,20 +50,20 @@ export default function Home() {
       {/* About Me */}
       <div id='about-me-section' className='flex flex-col items-center gap-4 mb-20'>
         <span className='font-bold text-3xl border-b-2 uppercase mb-10'>About me</span>
-        <p className='text-[#F8F7F9]/60 text-xl leading-7'>I am a Full Stack Developer who enjoys building complete applications, from user-friendly frontends to robust backends. I love solving problems and creating digital solutions that are clean, responsive, and impactful.</p>
+        <p className='text-[#A9A9A9] text-xl leading-7'>I am a Full Stack Developer who enjoys building complete applications, from user-friendly frontends to robust backends. I love solving problems and creating digital solutions that are clean, responsive, and impactful.</p>
         <div className='flex items-center mt-2'>
           <img src={boxlLogo} className='h-16'/>
-          <p className='text-[#F8F7F9]/60 text-lg leading-7'>I started my career at Boxl Technologies as a Junior Web Developer, where I gained hands-on experience with real projects, built responsive websites, and worked with APIs. This role gave me a strong foundation in professional development.</p>
+          <p className='text-[#A9A9A9] text-lg leading-7'>I started my career at Boxl Technologies as a Junior Web Developer, where I gained hands-on experience with real projects, built responsive websites, and worked with APIs. This role gave me a strong foundation in professional development.</p>
         </div>
 
         <div className='flex mt-2'>
-          <p className='text-[#F8F7F9]/60 text-lg leading-7'>Currently, I work at Lyxel and Flamingo on advanced full stack projects, focusing on scalable applications and modern frameworks. This experience has helped me grow, take ownership of tasks, and continue evolving as a developer.</p>
+          <p className='text-[#A9A9A9] text-lg leading-7'>Currently, I work at Lyxel and Flamingo on advanced full stack projects, focusing on scalable applications and modern frameworks. This experience has helped me grow, take ownership of tasks, and continue evolving as a developer.</p>
           <img src={landfLogo} className='h-16'/>
         </div>
 
       </div>
 
-      <div className='flex flex-col items-center gap-4 mb-20'>
+      <div className='flex flex-col items-center gap-4'>
         <span className='font-bold text-3xl border-b-2 uppercase mb-10'>Projects</span>
         
         <div className='grid grid-cols-3 gap-10'>

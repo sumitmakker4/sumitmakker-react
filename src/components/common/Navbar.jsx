@@ -23,7 +23,7 @@ export default function Navbar() {
             to={item.link} 
             className={({ isActive }) => 
                 `text-[18px] ${
-                isActive ? "!text-[#F8F7F9] font-bold" : "!text-[#F8F7F9]/70 font-normal hover:font-medium"
+                isActive ? "!text-[#F8F7F9] font-bold" : "!text-[#A9A9A9] font-normal hover:!text-[#F8F7F9] hover:font-bold"
                 }`
             }
             >
@@ -34,7 +34,7 @@ export default function Navbar() {
 
 
     const SocialMediaLink = ({item}) => {
-        return <a href={item.link} target='_blank' rel="noreferrer" className={`!font-normal !text-[#F8F7F9]/70 text-[18px] ${item.icon}`}></a>
+        return <a href={item.link} target='_blank' rel="noreferrer" className={`!font-normal !text-[#A9A9A9] text-[18px] hover:!text-[#F8F7F9] ${item.icon}`}></a>
     };
 
     useEffect(() => {
@@ -70,7 +70,7 @@ export default function Navbar() {
                     </div>
                     
                     {/* Separator */}
-                    <div className='border-1 h-full border-[#F8F7F9]/60'></div>
+                    <div className='border-1 h-full border-[#A9A9A9]'></div>
 
                     {/* Social Media Links */}
                     <div className='flex items-center gap-10'>
