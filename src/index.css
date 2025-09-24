@@ -15,6 +15,24 @@ body{
   
 }
 
+.home-header-msm-hidden{
+  display: block;
+}
+
+.home-header-msm-block{
+  display: none;
+}
+
+@media (min-width : 400px) {
+  .home-header-msm-hidden{
+    display: none;
+  }
+
+  .home-header-msm-block{
+    display: block;
+  }
+}
+
 @keyframes floatUpDown {
   0%, 100% {
     transform: translateY(0);
